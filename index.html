@@ -3,11 +3,68 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0>
-    <style> body {padding: 0; margin: 0;} </style>
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu&display=swap" rel="stylesheet">
+    <style>
+     body {padding: 0; margin: 0;}
+
+     body::-webkit-scrollbar {
+  display: none;
+}
+
+     .centered{
+       top:0;
+       left:0;
+     }
+
+     .eliminated{
+       top:-110vh;
+       left:-110vw;
+     }
+
+     .background{
+       position: fixed;
+       width: 100vw;
+       height: 100vh;
+       background-color: #1b1438;
+     }
+
+     .id_text{
+       position: absolute;
+       transform: translate(-50%,-50%);
+       top:50vh;
+       left:50vw;
+       text-align: center;
+       color: white;
+       font-family: 'Ubuntu';
+       width: 500px;
+       height: 200px;
+     }
+
+     .text{
+       top:0;
+       font-size: 30pt;
+     }
+     .text2{
+       padding-top:20px;
+       font-size: 20pt;
+     }
+     .text3{
+       padding-top:20px;
+       font-size: 20pt;
+     }
+   </style>
     <script src="p5.min.js"></script>
     <script src="p5.sound.min.js"></script>
     <script src="sketch.js"></script>
   </head>
   <body>
+    <div id='background' class='background centered'>
+      <div id='id_text' class='id_text'>
+        <div id='text' class='text'>The party is about to begin  <br>
+          and you are the DJ!</div>
+          <div id='text2' class='text2'>change the music by clicking the screen</div>
+        <div id='text3' class='text3'>CLICK TO START</div>
+      </div>
+    </div>
   </body>
 </html>
